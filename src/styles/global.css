@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import 'swiper/css';
+@import url('https://fonts.cdnfonts.com/css/alliance-no1');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth !important;
+  @apply bg-base-100;
+}
+
+a {
+  @apply text-blue-700;
+}
+
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.linear-gradient-border {
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right top, #45c4f9, #8920fe, #ff0be5, #ffc800);
+  padding: 1px;
+  border-radius: 16px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1f2327 #dfe9eb;
+}
+
+*::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #dfe9eb;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #b8c0c2;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #b8c0c2;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #1f2327;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #444d56;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #343b42;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.select {
+  position: relative;
+}
+
+.select::after {
+  content: '⌄';
+  font-size: 1.6rem;
+  color: white;
+  top: 32px;
+  right: 15px;
+  position: absolute;
+}
